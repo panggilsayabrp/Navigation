@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_naviagtion"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.berliano.mynavigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_category_Fragment"
+            app:destination="@id/category_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileActivity"
+            app:destination="@id/profileActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/category_Fragment"
+        android:name="com.berliano.mynavigation.Category_Fragment"
+        android:label="fragment_category_"
+        tools:layout="@layout/fragment_category_" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.berliano.mynavigation.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>
